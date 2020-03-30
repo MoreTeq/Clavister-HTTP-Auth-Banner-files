@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Authentication required - redirecting</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <style type="text/css">
+    body {
+      font-family: helvetica;
+      background: #ffffff;
+    }
+    form {
+      background: #ffffff;
+      margin: 0 auto 100px;
+      max-width: 360px;
+      position: relative;
+      text-align: left;
+      z-index: 1;
+    }
+    form input {
+      border: 0;
+      box-sizing: border-box;
+      font-size: 14px;
+      outline: 0;
+      padding: 15px;
+      width: 100%;
+    }
+    form input[type="text"],
+    form input[type="password"] {
+      background: #f2f2f2;
+      margin: 0 0 15px;
+    }
+    form input[type="submit"] {
+      background: #5287aa;
+      color: #FFFFFF;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    form input[type="submit"]:hover,
+    form input[type="submit"]:active,
+    form input[type="submit"]:focus {
+      background: #457ea4 ;
+    }
+    @media screen and (max-width: 599px) {
+      form {
+        padding: 10px;
+      }
+    }
+    @media screen and (min-width: 600px) {
+      .container {
+        width: 360px;
+        padding: 8% 0 0;
+        margin: auto; 
+      }
+      form {
+        box-shadow: 0 0 20px 0 #cccccc, 0 3px 3px 0 #ffffff;
+        padding: 45px;
+      }
+    }
+  </style>
+</head>
+<body onLoad="redirTimer()">
+<script LANGUAGE="JavaScript">
+redirTime = "100";
+redirURL = "http://auth_address_here/";
+function redirTimer() { self.setTimeout("self.location.href = redirURL;",redirTime); }
+</script>
+<div class="container">
+<form>
+  <b>Authentication required - redirecting</b>
+</form>
+</div>
+</body>
+</html>
